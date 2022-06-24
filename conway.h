@@ -1,0 +1,48 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   conway.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jgarcia <jgarcia@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/19 18:24:32 by jgarcia           #+#    #+#             */
+/*   Updated: 2022/06/21 23:30:44 by jgarcia          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef CONWAY_H
+# define CONWAY_H
+# include <mlx.h>
+# include <string.h>
+# include <stdlib.h>
+# include <time.h>
+# include <stdio.h>
+# include <unistd.h>
+# define DEFAULT_X 1000
+# define DEFAULT_Y 1000
+# define DEFAULT_CELL 5
+
+typedef struct s_cell
+{
+	int		alive;
+	int		neighbour;
+} t_cell;
+
+typedef struct	s_data
+{
+	int		*cell_map;
+	t_cell	*buffer;
+	int		size_x;
+	int		size_y;
+	int		size_cell;
+	void	*mlx;
+	void	*mlx_win;
+} t_data;
+
+int	d2tod1(int x, int y, int size_x,int size_y);
+void	rnd_fill_cellmap(int *cell_map, int size_x, int size_y);
+int		*init_cellmap(int *cell_map,int size_x, int size_y);
+t_cell	*prep_buffer(int *cell_map, t_cell *buffer, int size_x, int size_y);
+void	next_gen(int *cell_map,t_cell *buffer,int size_x,int size_y);
+
+#endif
