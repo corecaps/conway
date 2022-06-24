@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = conway
-
+CURRENT_DIR = $(shell pwd)
 CC = gcc
 CFLAGS = -Wall -Wextra -g -c
 
@@ -26,13 +26,13 @@ RM = rm -f
 
 all : $(NAME)
 
-$(NAME): $(OBJ) minilibx/libmlx.a
+$(NAME): $(OBJ) $(CURRENT_DIR)/minilibx/libmlx_Linux.a
 	$(CC) $(OBJ) $(LINK) -o $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) $(INC) $< -o $@
 
-minilibx/libmlx.a:
+$(CURRENT_DIR)/minilibx/libmlx_Linux.a:
 	make -C minilibx-linux
 
 clean:

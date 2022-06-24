@@ -17,15 +17,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d61d04d6-b1ab-4f70-a1f0-2e3531277dff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/conway.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="d61d04d6-b1ab-4f70-a1f0-2e3531277dff" name="Changes" comment="Added CLion files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cell.c" beforeDir="false" afterPath="$PROJECT_DIR$/cell.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cell.o" beforeDir="false" afterPath="$PROJECT_DIR$/cell.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conway" beforeDir="false" afterPath="$PROJECT_DIR$/conway" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conway.h" beforeDir="false" afterPath="$PROJECT_DIR$/conway.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/main.o" afterDir="false" />
     </list>
@@ -92,7 +87,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true"
+    "cidr.known.project.marker": "true",
+    "settings.editor.selected.configurable": "vcs.Subversion",
+    "structure.view.defaults.are.configured": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Makefile Application.all">
@@ -121,14 +118,29 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
+    <configuration name="minilibx/libmlx.a" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="minilibx/libmlx.a" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Makefile Application.all" />
       <item itemvalue="Makefile Application.fclean" />
       <item itemvalue="Makefile Application.re" />
       <item itemvalue="Makefile Application.conway" />
+      <item itemvalue="Makefile Target.minilibx/libmlx.a" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.minilibx/libmlx.a" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d61d04d6-b1ab-4f70-a1f0-2e3531277dff" name="Changes" comment="" />
@@ -136,8 +148,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656075431766</updated>
-      <workItem from="1656075432867" duration="1838000" />
+      <workItem from="1656075432867" duration="3006000" />
     </task>
+    <task id="LOCAL-00001" summary="Cell.c &#10;fixed leaks &amp; invalid read">
+      <created>1656077326711</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1656077326711</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added CLion files">
+      <created>1656077628622</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1656077628622</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +180,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Cell.c &#10;fixed leaks &amp; invalid read" />
+    <MESSAGE value="Added CLion files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added CLion files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

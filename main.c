@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "conway.h"
-#include <mlx.h>
+#include "minilibx-linux/mlx.h"
 
 
 int	main(void)
@@ -31,37 +31,37 @@ int	main(void)
 	data->size_cell = DEFAULT_CELL;
     data->cell_map = NULL;
     data->cell_map = init_cellmap(data->cell_map, data->size_x, data->size_y);
-//	data->mlx_win = mlx_new_window(data->mlx, data->size_x * data->size_cell, 
-//		data->size_y * data->size_cell, "Conway Game Of Life");
+	data->mlx_win = mlx_new_window(data->mlx, data->size_x * data->size_cell,
+		data->size_y * data->size_cell, "Conway Game Of Life");
 	rnd_fill_cellmap(data->cell_map, data->size_x, data->size_y);
 	data->buffer = NULL;
 	i = 0;
-    while (i < 30)
-	{
-		data->buffer = prep_buffer(data->cell_map, data->buffer,
-			data->size_x, data->size_y);
-		next_gen(data->cell_map, data->buffer, data->size_x, data->size_y);
-		y = 0;
-		while (y < data->size_y)
-		{
-			x = 0;
-			while (x < data->size_x)
-			{
-				pos =d2tod1(x, y, data->size_x, data->size_y);
-				printf("%d",(int)data->cell_map[pos]);
-				x ++;
-			}
-			printf("\n");
-			y ++;
-		}
-		printf("\n\n=========================================\n\n");
-		i ++;
-	}
+//    while (i < 30)
+//	{
+//		data->buffer = prep_buffer(data->cell_map, data->buffer,
+//			data->size_x, data->size_y);
+//		next_gen(data->cell_map, data->buffer, data->size_x, data->size_y);
+//		y = 0;
+//		while (y < data->size_y)
+//		{
+//			x = 0;
+//			while (x < data->size_x)
+//			{
+//				pos =d2tod1(x, y, data->size_x, data->size_y);
+//				printf("%d",(int)data->cell_map[pos]);
+//				x ++;
+//			}
+//			printf("\n");
+//			y ++;
+//		}
+//		printf("\n\n=========================================\n\n");
+//		i ++;
+//	}
+//    mlx_loop(data->mlx);
     free(data->mlx);
     free(data->mlx_win);
     free(data->cell_map);
     free(data->buffer);
     free(data);
-	//	mlx_loop(data->mlx);
 	return (0);
 }
