@@ -18,8 +18,8 @@
 # include <time.h>
 # include <stdio.h>
 # include <unistd.h>
-# define DEFAULT_X 1000
-# define DEFAULT_Y 1000
+# define DEFAULT_X 10
+# define DEFAULT_Y 10
 # define DEFAULT_CELL 5
 
 typedef struct s_cell

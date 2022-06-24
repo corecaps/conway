@@ -18,6 +18,7 @@ int	main(void)
 {
 	int x,y;
 	int pos;
+    int i;
 	t_data	*data;
 
 	srand(time(NULL));
@@ -28,12 +29,14 @@ int	main(void)
 	data->size_x = DEFAULT_X;
 	data->size_y = DEFAULT_Y;
 	data->size_cell = DEFAULT_CELL;
-	data->cell_map = init_cellmap(data->cell_map, data->size_x, data->size_y);
+    data->cell_map = NULL;
+    data->cell_map = init_cellmap(data->cell_map, data->size_x, data->size_y);
 //	data->mlx_win = mlx_new_window(data->mlx, data->size_x * data->size_cell, 
 //		data->size_y * data->size_cell, "Conway Game Of Life");
 	rnd_fill_cellmap(data->cell_map, data->size_x, data->size_y);
 	data->buffer = NULL;
-	while (1)
+	i = 0;
+    while (i < 30)
 	{
 		data->buffer = prep_buffer(data->cell_map, data->buffer,
 			data->size_x, data->size_y);
@@ -52,8 +55,13 @@ int	main(void)
 			y ++;
 		}
 		printf("\n\n=========================================\n\n");
-		sleep(5);
+		i ++;
 	}
+    free(data->mlx);
+    free(data->mlx_win);
+    free(data->cell_map);
+    free(data->buffer);
+    free(data);
 	//	mlx_loop(data->mlx);
 	return (0);
 }

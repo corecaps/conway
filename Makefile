@@ -15,8 +15,8 @@ NAME = conway
 CC = gcc
 CFLAGS = -Wall -Wextra -g -c
 
-INC = -I/usr/local/include
-LINK = -L/usr/local/lib -lmlx -lXext -lX11 -lm -lz
+INC = -Iminilibx-linux/
+LINK = -Lminilibx-linux -lmlx_Linux -lXext -lX11 -lm -lz
 
 SRC = cell.c main.c
 
@@ -26,11 +26,14 @@ RM = rm -f
 
 all : $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) minilibx/libmlx.a
 	$(CC) $(OBJ) $(LINK) -o $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) $(INC) $< -o $@
+
+minilibx/libmlx.a:
+	make -C minilibx-linux
 
 clean:
 	$(RM) $(OBJ)

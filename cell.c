@@ -18,11 +18,11 @@ int	d2tod1(int x, int y, int size_x, int size_y)
 	if (x > size_x)
 		x = 0;
 	else if (x < 0)
-		x = size_x;
+		x = size_x - 1;
 	if (y > size_y)
 		y = 0;
 	else if (y < 0)
-		y = size_y;
+		y = size_y - 1;
 	return (x + (y * size_x));
 }
 
@@ -31,7 +31,7 @@ int	*init_cellmap(int *cell_map,int size_x, int size_y)
 	int	i;
 
 	if (!cell_map)
-		cell_map = malloc(sizeof(int) * (size_x * size_y));
+		cell_map = malloc(sizeof(int) * ((size_x + 1)  * (size_y + 1)) );
 	if (!cell_map)
 		return (NULL);
 	i = 0;
@@ -72,7 +72,7 @@ t_cell	*prep_buffer(int *cell_map, t_cell *buffer,int size_x, int size_y)
 	int		pos;
 
 	if (!buffer)
-		buffer = malloc(sizeof(t_cell) * ((size_x * size_y) + 1));
+		buffer = malloc(sizeof(t_cell) * ((size_x + 1) * (size_y + 1) ));
 	pos = 0;
 	while (pos < size_x * size_y)
 	{
