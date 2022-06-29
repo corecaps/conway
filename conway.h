@@ -18,10 +18,11 @@
 # include <time.h>
 # include <stdio.h>
 # include <unistd.h>
-# define DEFAULT_X 10
-# define DEFAULT_Y 10
-# define DEFAULT_CELL 5
-
+# define DEFAULT_X 200
+# define DEFAULT_Y 200
+# define DEFAULT_CELL 3
+# define CELL_COLOR 0xFF0000
+# define MAX_FRAME 1000
 typedef struct s_cell
 {
 	int		alive;
@@ -39,6 +40,8 @@ typedef struct	s_data
 	void	*mlx_win;
 } t_data;
 
+int	win_close(int keycode, t_data *data);
+int render(t_data *data);
 int	d2tod1(int x, int y, int size_x,int size_y);
 void	rnd_fill_cellmap(int *cell_map, int size_x, int size_y);
 int		*init_cellmap(int *cell_map,int size_x, int size_y);

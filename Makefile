@@ -18,7 +18,7 @@ CFLAGS = -Wall -Wextra -g -c
 INC = -Iminilibx-linux/
 LINK = -Lminilibx-linux -lmlx_Linux -lXext -lX11 -lm -lz
 
-SRC = cell.c main.c
+SRC = cell.c main.c graphX.c
 
 OBJ = $(SRC:.c=.o)
 
