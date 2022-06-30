@@ -18,15 +18,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d61d04d6-b1ab-4f70-a1f0-2e3531277dff" name="Changes" comment="Added CLion files">
-      <change afterPath="$PROJECT_DIR$/graphX.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphX.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Readme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/minilibx-linux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cell.o" beforeDir="false" afterPath="$PROJECT_DIR$/cell.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conway" beforeDir="false" afterPath="$PROJECT_DIR$/conway" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conway.h" beforeDir="false" afterPath="$PROJECT_DIR$/conway.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cell.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conway" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphX.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,26 +81,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/corecaps/42/conway&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Subversion&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/home/corecaps/42/conway",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Subversion",
+    "structure.view.defaults.are.configured": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Makefile Application.all">
+  <component name="RunManager" selected="Makefile Application.fclean">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -161,7 +160,7 @@
       <workItem from="1656075432867" duration="3006000" />
       <workItem from="1656108122570" duration="1753000" />
       <workItem from="1656540819355" duration="4268000" />
-      <workItem from="1656546251999" duration="6000" />
+      <workItem from="1656546251999" duration="1074000" />
     </task>
     <task id="LOCAL-00001" summary="Cell.c &#10;fixed leaks &amp; invalid read">
       <created>1656077326711</created>
@@ -177,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656077628622</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added CLion files">
+      <created>1656546386761</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1656546386761</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
