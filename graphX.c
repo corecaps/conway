@@ -20,6 +20,14 @@ int	win_close(int keycode, t_data *data)
 	return (0);
 }
 
+void	my_mlx_pixel_put(t_buffer *data, int x, int y, int color)
+{
+	char	*dst;
+
+	dst = data->addr + (y * data->line_length + x * (data->bit_per_pixel / 8));
+	*(unsigned int*)dst = color;
+}
+
 void draw_cell(t_data *data, int x, int y)
 {
 	x = x * DEFAULT_CELL;
@@ -32,13 +40,27 @@ void draw_cell(t_data *data, int x, int y)
 		x = x_org;
 		while (x < max_x)
 		{
-			mlx_pixel_put(data->mlx, data->mlx_win, x, y, CELL_COLOR);
+			my_mlx_pixel_put(data->dbl_buffer, x, y, CELL_COLOR);
 			x++;
 		}
 		y++;
 	}
 }
-
+void clear_img(t_data *data)
+{
+	int x;
+	int y = 0;
+	while (y < (data->size_y * data->size_cell))
+	{
+		x = 0;
+		while (x < (data->size_x * data->size_cell))
+		{
+			my_mlx_pixel_put(data->dbl_buffer,x,y,0);
+			x ++;
+		}
+		y ++;
+	}
+}
 int render(t_data *data)
 {
 	int 		x;
@@ -48,7 +70,16 @@ int render(t_data *data)
 
 	if (frame_count == MAX_FRAME)
 	{
-		mlx_clear_window(data->mlx, data->mlx_win);
+		mlx_put_image_to_window(data->mlx, data->mlx_win, data->dbl_buffer->img, 0 ,0);
+		frame_count = 0;
+	}
+	else if (frame_count == 0)
+	{
+		clear_img(data);
+		frame_count ++;
+	}
+	else if (frame_count == MAX_FRAME / 2)
+	{
 		data->buffer = prep_buffer(data->cell_map, data->buffer,
 								   data->size_x, data->size_y);
 		next_gen(data->cell_map, data->buffer, data->size_x, data->size_y);
@@ -65,7 +96,7 @@ int render(t_data *data)
 			}
 			y++;
 		}
-		frame_count = 0;
+		frame_count ++;
 	}
 	else
 	{
