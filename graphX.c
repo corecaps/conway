@@ -30,6 +30,7 @@ void	my_mlx_pixel_put(t_buffer *data, int x, int y, int color)
 
 void draw_cell(t_data *data, int x, int y)
 {
+	static int color_offset = 0;
 	x = x * DEFAULT_CELL;
 	int x_org = x;
 	y = y * DEFAULT_CELL;
@@ -40,11 +41,15 @@ void draw_cell(t_data *data, int x, int y)
 		x = x_org;
 		while (x < max_x)
 		{
-			my_mlx_pixel_put(data->dbl_buffer, x, y, CELL_COLOR);
+			my_mlx_pixel_put(data->dbl_buffer, x, y, CELL_COLOR+color_offset);
 			x++;
 		}
 		y++;
 	}
+	if (color_offset == 255)
+		color_offset = 0;
+	else
+		color_offset ++;
 }
 void clear_img(t_data *data)
 {
