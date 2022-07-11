@@ -18,11 +18,13 @@
 # include <time.h>
 # include <stdio.h>
 # include <unistd.h>
-# define DEFAULT_X 400
-# define DEFAULT_Y 150
-# define DEFAULT_CELL 4
-# define CELL_COLOR 0xFF0000
-# define MAX_FRAME 2000
+# include <ctype.h>
+# include <stdio.h>
+# define DEFAULT_X 750
+# define DEFAULT_Y 400
+# define DEFAULT_CELL 2
+# define CELL_COLOR 0x7F0000
+# define MAX_FRAME 50
 typedef struct s_cell
 {
 	int		alive;
